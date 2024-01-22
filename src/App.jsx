@@ -33,6 +33,20 @@ const App = () => {
           </nav>
         </div>
         <h1>Weather App</h1>
+        <nav className="desktopNav">
+          <NavLink className="NavLink" to="">
+            Home
+          </NavLink>
+          <NavLink className="NavLink" to="cities-temp">
+            Cities Temp.
+          </NavLink>
+          <NavLink className="NavLink" to="local">
+            Local Forecast
+          </NavLink>
+          <NavLink className="NavLink" to="cities">
+            Cities Forecast
+          </NavLink>
+        </nav>
       </header>
       <main>
         <div className="firstContainer">

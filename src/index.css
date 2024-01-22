@@ -370,6 +370,10 @@ button:focus-visible {
     margin-bottom: 25%;
   }
 
+  .desktopNav {
+    display: none;
+  }
+
   h1 {
     font-size: 2.5rem;
   }
