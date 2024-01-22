@@ -166,6 +166,7 @@ nav {
 .cardContainer {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center
 }
 
 .card {
@@ -201,6 +202,7 @@ nav {
 .citiesContainer {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .cityCard {
@@ -261,6 +263,158 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.menu-icon {
+  cursor: pointer;
+  display: none;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav.open {
+  width: 250px;
+}
+
+.sidenav nav {
+  padding: 15px;
+}
+
+.sidenav .NavLink {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  color: #f1f1f1;
+}
+
+.sidenav .menu-icon {
+  margin-top: 3%;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+@media (max-width: 768px) {
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+  }
+
+  .firstContainer {
+    margin-top: 35%;
+    margin-bottom: 25%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .NavLink {
+    margin: 10px;
+  }
+
+  .sidenav.open {
+    width: 100%;
+  }
+
+  .citieTempContainer{
+    flex-direction: column;
+  }
+
+  .tempCard {
+    border-right: 0;
+    border-bottom: 1px solid black;
+  }
+
+  .forecastContainer {
+    max-height: 500px;
+  }
+}
+
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -273,3 +427,4 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
